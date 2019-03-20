@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      width: 150px;
+      grid-template-columns: 60px 60px;
+      grid-template-rows: 30px 90px;
+      grid-auto-columns: 60px;
+      background: red;
+    }
+    .item-a { 
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      background: #ccc;
+    }
+    .item-b { 
+      /* 容器水平只有2个格子，但这里设定的是第3个，隐式网格创建 */
+      grid-column: 3 / 4;
+      grid-row: 2 / 3; 
+      background-color: rgba(255,255,0, .5);
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="item-a"></div>
+      <div class="item-b"></div>
+    </div>
+</body>
+</html>

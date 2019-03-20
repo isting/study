@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+.container {
+  display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: 
+        "葡萄 葡萄 葡萄"
+        "龙虾 养鱼 养鱼"
+        "龙虾 养鱼 养鱼"
+        "西瓜 西瓜 西瓜"; */
+/* 简写 */
+    grid-template: 
+        "葡萄 葡萄 葡萄" 100px 
+        "龙虾 养鱼 养鱼" 100px 
+        "龙虾 养鱼 养鱼" 100px 
+        "西瓜 西瓜 西瓜" 100px
+        /1fr 1fr 1fr;
+}
+.putao { grid-area: 葡萄; }
+.longxia { grid-area: 龙虾; }
+.yangyu { grid-area: 养鱼; }
+.xigua { grid-area: 西瓜; }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="putao">1</div>
+        <div class="longxia">2</div>
+        <div class="yangyu">3</div>
+        <div class="xigua">4</div>
+    </div>
+</body>
+</html>

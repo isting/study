@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template: none;
+      /* grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+        "a1 a1 a1"
+        "a2 a2 a3"
+        "a2 a2 a3"
+        "a4 a4 a4"; */
+        grid-template: 
+        "a1 a1 a1" 100px
+        "a2 a2 a3" 100px 
+        "a2 a2 a3" 100px 
+        "a4 a4 a4" 100px
+        / 100px 100px 100px;
+
+      /* grid-column-gap: 10px;
+      grid-row-gap: 20px; */
+
+      grid-gap: 20px 10px;
+      /* justify-items: center; */ /* 横向对比 默认横向铺满 放在前面start 居中center 放到后面end */ 
+      /* align-items: center; */
+      /* place-items: center / center; */ /* chrome并不支持 */
+      /* justify-content: space-between; */
+    }
+    .a1 {
+      grid-area: a1;
+      background: red;
+    }
+    .a2 {
+      grid-area: a2;
+      background: orange;
+      /* justify-content: space-between; */
+    }
+    .a3 {
+      grid-area: a3;
+      background: blue;
+    }
+    .a4 {
+      grid-area: a4;
+      background: yellow;
+    }
+    .m1 {
+      background: skyblue;
+    }
+    .m2 {
+      background: greenyellow;
+    }
+    .m3 {
+      background: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="a1">1</div>
+    <div class="a2">
+      <div class="m1">a1</div>
+      <div class="m2">a2</div>
+      <div class="m3">a3</div>
+    </div>
+    <div class="a3">3</div>
+    <div class="a4">4</div>
+  </div>
+</body>
+</html>
